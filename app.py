@@ -43,7 +43,8 @@ else:
     st.sidebar.success("✅ Gemini API configurada")
 
 def analyze_with_gemini(metadata_str):
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    # Usamos el modelo recomendado actual
+    model = genai.GenerativeModel('gemini-2.5-flash')
     prompt = f"""
     Eres un analista de datos experto. Se ha subido un dataset y a continuación se te proporciona su estructura, columnas, tipos de datos y una pequeña muestra de las primeras filas.
     
